@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+.slider-item
+    outline: unset
+    &:focus
+        outline: unset
+        
+
+*
+    font-family: Open Sans
+a
+    color: #fff 
+    text-decoration: none
+ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+    li 
+h2 
+    font-size: 1.750em
+h1, h2, h3, h4, h5, p 
+    margin: 0
+    padding: 0
+
+
+.mobile-menu__btn
+    display: none
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 35px
+    height: 30px
+    cursor: pointer
+    transition: .4s
+    .mobile-menu__icon
+        top: 50%
+        display: none
+        position: relative
+        background: white
+        width: 90%
+        height: 4px
+        transition: all .3s, height 0s
+
+        &::after, &::before 
+            content: ""
+            display: block
+            position: absolute
+            background: rgba(255,255,255,1)
+            width: 100%
+            height: 4px
+            transition: all .3s, height 0s
+        &::after 
+            top: 8px
+        &::before 
+            top: -8px
+        &-active
+            height: 0
+            &::before
+                top: 0px !important
+                transform: rotate(45deg)
+            &::after
+                top: 0px !important
+                transform: rotate(-45deg)
+
+
+
+        
+    
+
+.container
+    padding: 0 20px
+    height: 100%
+    max-width: 1170px
+    margin: 0 auto
+.header
+    height: 100vh
+    width: 100%
+    background-image: url('../img/header.jpg')
+    background-size: cover 
+    background-repeat: no-repeat
+    background-position: center
+    color: #fff
+    nav 
+        transition: 0.2s ease
+        height: 60px
+        // width: calc(100vw - 20vw)
+        padding: 0 10vw
+        background-color: #0c2927
+        // background-color: #0fb37a
+        z-index: 5
+        top: 0
+        left: 0
+        .flex-container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            height: 100%
+        &.underHeader
+            width: calc(100vw - 20vw)
+
+            position: fixed
+            background-color: #0fb37a
+        
+
+
+        .left-side
+            display: flex
+            align-items: center
+            .logo
+                width: 100px
+            span
+                font-size: 20px
+                font-weight: 700
+                color: #0b2429
+                
+            .introduce
+                color: #4a5455
+
+        ul
+            
+            display: flex
+            li
+                &:not(:first-child)
+                    padding-left: 1em
+    .greeting
+        text-align: center
+        height: 90%
+        display: flex 
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        h1
+            font-size: 3.8em
+            font-weight: 400
+            margin-bottom: 0.2em
+            span
+                font-weight: 700
+            
+        .about
+            margin-bottom: 0.4em
+            font-size: 2.8em
+        
+            span
+                color: #0f9f6c
+        .description
+    .soc 
+        width: 100px
+        padding-top: 2em
+        margin: 0 auto
+        display: flex 
+        justify-content: space-between 
+        align-content: center
+        i
+            transition: opacity 0.2s 
+            font-size: 1.2em
+            opacity: 0.5
+            &:hover 
+                opacity: 1
+            
+    .container
+
+.features
+    min-height: 460px
+    background-color: #f4f7f9
+    padding-bottom: 2em
+
+    h2
+        padding-top: 3.500em
+        color: #0eb493
+        text-align: center
+        margin-bottom: 1em
+
+    .separator
+        display: flex
+        justify-content: center
+        align-content: center
+        span
+            width: 100px
+            height: 1px
+            background-color: #a39c9c54
+            margin: 5px
+        .fa-heart
+            color: #a39c9c83
+        
+    .slider
+        margin-top: 4em
+
+        .slick-dots
+            width: 100%
+            margin-top: 6em
+            text-align: center
+            .slick-active
+                button:before
+                    opacity: 1
+            li
+                position: relative
+                display: inline-block
+                width: 20px
+                height: 20px
+                margin: 0 5px
+                padding: 0
+                cursor: pointer
+                button
+                    font-size: 0
+                    line-height: 0
+                    display: block
+                    width: 20px
+                    height: 20px
+                    padding: 5px
+                    cursor: pointer
+                    color: transparent
+                    border: 0
+                    outline: none
+                    background: transparent
+                    &:before
+                        font-family: 'slick'
+                        font-size: 2rem
+                        line-height: 20px
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 20px
+                        height: 20px
+                        content: '•'
+                        text-align: center
+                        opacity: .25
+                        color: black
+
+
+    .slider-item
+        margin-left: 10px
+        // width: 357px
+        position: relative
+        padding-left: 50px
+        .title 
+            font-size: 1.250em
+            font-weight: 700
+            margin-bottom: 1em
+        img
+            position: absolute
+            left: 0
+            right: 0
+            width: 40px
+            height: 40px
+        
+
+.works
+    .container
+        max-width: 1600px
+    h2
+        color: #0eb493
+        text-align: center
+        margin-bottom: 1em
+        padding-top: 3.500em
+
+    .separator
+        display: flex
+        justify-content: center
+        align-content: center
+        span
+            width: 100px
+            height: 1px
+            background-color: #a39c9c54
+            margin: 5px
+        .fa-heart
+            color: #a39c9c83
+    
+    .description
+        font-size: 1.12em
+        padding-top: 2em
+        text-align: center
+        line-height: 1.333
+        max-width: 970px
+        margin: 0 auto
+        margin-bottom: 2.6em
+    .filter
+        font-weight: 700
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        margin-bottom: 2.5em
+        li
+            padding: 0.2em 1em
+            margin: 0.2em 1em
+            cursor: pointer
+            border-radius: 0.8em
+
+            transition: color 0.2s, 
+            &:not(:first-child)
+                padding-left: 1em
+            &:hover 
+                color: #0eb493
+            
+        .active
+            transition: unset
+            color: #fff
+            background-color: #0eb493
+            transition: background-color 0.3s ease-in, color 0.2s ease-in
+            &:hover 
+                color: #fff
+    .flex-list
+        display: flex
+        flex-wrap: wrap
+        .list-item
+            width: 25%
+            position: relative
+            img
+                width: 100%
+                height: 100%
+            .mask
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                position: absolute 
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                color: #fff
+                text-align: center
+                font-size: 1.2em
+                opacity: 0
+                transition: opacity 0.6s ease, background-color 0.6s ease
+                img 
+                    margin-bottom: 1em
+                    border-radius: 50%
+                    border: 1px solid #fff
+                    width: 26px
+                    height: 16px
+                    padding: 17px 14px
+                .title
+                    font-weight: 700
+                    line-height: 1.333
+                .description
+                    padding: 0
+                    margin: 0
+                    font-size: 1em
+
+            &:hover 
+                .mask 
+                    background-color: rgba(26,183,152,0.9)
+                    opacity: 1
+        .hide
+            display: none
+            
+
+.team
+    background-color: #f4f7f9
+    min-height: 920px
+    .container
+    h2
+        color: #0eb493
+        text-align: center
+        margin-bottom: 1em
+        padding-top: 3.500em
+
+    .separator
+        display: flex
+        justify-content: center
+        align-content: center
+        span
+            width: 100px
+            height: 1px
+            background-color: #a39c9c54
+            margin: 5px
+        .fa-heart
+            color: #a39c9c83
+    .description
+        font-size: 1.12em
+        padding-top: 2em
+        text-align: center
+        line-height: 1.333
+        max-width: 970px
+        margin: 0 auto
+        margin-bottom: 5.7em
+    .flex-list
+        .slick-dots
+            width: 100%
+            margin-top: 4.737em
+            text-align: center
+            .slick-active
+                button:before
+                    opacity: 1
+            li
+                position: relative
+                display: inline-block
+                width: 20px
+                height: 20px
+                margin: 0 5px
+                padding: 0
+                cursor: pointer
+                button
+                    font-size: 0
+                    line-height: 0
+                    display: block
+                    width: 20px
+                    height: 20px
+                    padding: 5px
+                    cursor: pointer
+                    color: transparent
+                    border: 0
+                    outline: none
+                    background: transparent
+                    &:before
+                        font-family: 'slick'
+                        font-size: 2rem
+                        line-height: 20px
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 20px
+                        height: 20px
+                        content: '•'
+                        text-align: center
+                        opacity: .25
+                        color: black
+        .flex-item
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            outline: unset
+
+
+            &:not(:first-child)
+            &:hover 
+                .list-title
+                    color: #0eb493
+                .photo
+                    opacity: 1
+                .mask
+                    background-color: rgba(26,183,152,0.9)
+                    opacity: 1
+
+        .photo
+            background-image: url('../img/team1.jpg')
+            background-position: center
+            background-size: cover
+            width: 98%
+            height: 100%
+            position: relative
+            .mask
+                width: 100%
+                height: 100%
+                color: #fff
+                text-align: center
+                font-size: 1em
+                line-height: 1.5
+                opacity: 0
+                transition: opacity 0.6s ease, background-color 0.6s ease
+                        
+                .photo-title
+                    padding: 1em 1em
+                    font-weight: 700
+                .photo-description
+                    padding: 0em 1em
+                    margin-bottom: 3em
+                .soc
+                    padding-bottom: 1em
+                    li
+                        background-color: rgba(0, 0, 0, 0.32)
+                        display: inline-block
+                        width: 40px
+                        padding: 0.3em
+                        opacity: 0.6
+                        transition: opacity 0.2s ease
+                        &:hover
+                            opacity: 1
+                            
+
+            
+        
+        .list-title
+            margin-top: 0.8em
+            font-size: 1.1em
+            line-height: 1.333
+            text-align: center
+            transition: color 0.8s ease
+
+        .list-post
+            text-align: center
+            line-height: 1.846
+            font-size: 0.9em
+
+
+.counter
+    background: fixed
+    background-image: url(../img/counter-bg1.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    min-height: 600px
+    animation: bacground-change 6s linear alternate infinite
+    .container
+        max-width: 1100px
+    h2
+        padding-top: 3.500em
+        color: #0eb493
+        text-align: center
+        margin-bottom: 1em
+    .separator
+        display: flex
+        justify-content: center
+        align-content: center
+        span
+            width: 100px
+            height: 1px
+            background-color: #a39c9c54
+            margin: 5px
+        .fa-heart
+            color: #fff
+    .counter-slider
+        margin-top: 2em
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .slider-item
+            width: 25%
+            color: #fff
+            text-align: center
+         
+
+            .img
+                margin: 0 auto 3.125em auto
+                background-position: center
+                background-repeat: no-repeat
+                border-width: 2px
+                border-color: rgba(255, 255, 255, 0.4)
+                border-style: solid
+                border-radius: 50%
+                width: 126px
+                height: 126px
+                position: relative
+                img
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+            .count
+                font-size: 2.5em
+                line-height: 1.2
+                font-weight: 700
+            .description
+                font-size: 1.1em
+                text-transform: uppercase
+                line-height: 1.2
+
+
+.discuss
+    min-height: 600px
+    .container
+        padding-bottom: 10px
+    h2
+        color: #0eb493
+        text-align: center
+        margin-bottom: 1em
+        padding-top: 3.500em
+
+    .separator
+        display: flex
+        justify-content: center
+        align-content: center
+        span
+            width: 100px
+            height: 1px
+            background-color: #a39c9c54
+            margin: 5px
+        .fa-heart
+            color: #a39c9c83
+    .description
+        font-size: 1.12em
+        padding-top: 2em
+        text-align: center
+        line-height: 1.333
+        max-width: 970px
+        margin: 0 auto
+        margin-bottom: 4.35em
+    .flex-container
+        display: flex
+        .konts
+            max-width: 270px
+            .title
+                font-size: 1.375em
+                line-height: 1.455
+                margin-bottom: 1.609em
+            .inf
+                line-height: 1.84
+                font-size: 0.813em
+                color: #888f95
+                width: 170px
+                .addres
+                .phone
+                .email
+                .site
+        .form
+            margin-left: 2%
+            width: 65.4%
+            input
+                font-size: 0.813em
+                border: unset
+                outline: unset
+                border-bottom: 1px solid #cccccc
+                padding: 1em 0
+                padding-left: 5px
+                
+                &:placeholder
+                    color: #cdd0d3
+            .title
+                line-height: 1.455
+                font-size: 1.500em
+                font-weight: 700
+                margin-bottom: 1.333em
+            .name
+                width: 47%
+            .email
+                width: 47%
+                margin-left: 2.2%
+            .message
+                margin-top: 1.609em
+                display: block
+                width: calc(96.2% + 9px) 
+            .sumbit
+                display: flex 
+                justify-content: flex-end
+                align-items: center
+                margin-top: 2.188em
+                svg
+                    margin-right: 0.8em
+                input
+                    background-color: unset
+                    border: unset
+                    font-weight: 600
+                    font-size: 1em
+                    padding: 0
+                    cursor: pointer
+                    transition: color 0.2s ease
+                    &:hover 
+                        color: #0eb493
+                    
+        .soc
+            margin-top: 15px
+            margin-left: 3%
+            font-size: 1.6em
+            ul
+                display: flex 
+                flex-direction: column 
+                align-items: center
+                justify-content: center
+                li
+                    margin: 5px
+                    a
+                        color: #cdd2d6
+                        transition: color 0.2s ease
+                        &:hover 
+                            color: #222
+
+
+.footer
+    min-height: 380px
+    background-color: #1ea78d
+    border-top: 5px solid #062033
+    color: #fff
+    padding-bottom: 20px
+    .container
+        height: unset
+        margin-top: 3em
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        &>div 
+            padding: 0 10px
+    .description
+        font-size: 0.8em
+        line-height: 1.846
+    .title
+        margin-top: 3em
+        margin-bottom: 1.5em
+        font-weight: 600
+        font-size: 0.9em
+        line-height: 1.7
+    .about
+        width: 20%
+        img 
+            margin-bottom: 1.5em
+
+            width: 100px
+        p 
+    .subscribe
+        width: 20%
+    .explore
+        margin: 0 5px
+        width: 20%
+        .flex
+            display: flex 
+            justify-content: space-between
+            div
+                margin: 0 5px
+                a 
+                    display: block
+                    &:hover 
+                        text-decoration: underline
+    .author 
+        margin: 0 5px
+        margin-top: 5.6em
+        width: 20%
+        i
+            color: #222
+        a
+            color: #222
+            &:hover 
+                text-decoration: underline
+        .copirate
+            margin-top: 2em
+            color: #222
+    
+            
+
+@keyframes bacground-change
+    0%
+        background-image: url(../img/counter-bg1.jpg)
+    100%
+        background-image: url(../img/counter-bg2.jpg)
+
+
+
+
+@media screen and (max-width: 900px)
+    
+    .works 
+        .flex-list 
+            .list-item
+                width: 33.3%
+    .discuss 
+        .flex-container 
+            .form
+                form
+                    .name
+                        width: calc(96.2% + 9px)
+                    .email
+                        margin-top: 1.609em
+                        margin-left: 0
+                        width: calc(96.2% + 9px)
+
+
+    .footer
+        .about
+            width: 45%
+        .subscribe
+            width: 45%
+        .explore
+            width: 270px
+        .author 
+            width: 45%
+
+@media screen and (max-width: 660px)
+    .mobile-menu__btn
+        z-index: 999
+        display: block
+        .mobile-menu__icon
+            display: block
+    .header 
+        nav 
+            .flex-container
+            .right-side
+                z-index: 99
+                background-color: #0e302d
+                position: absolute
+                top: 60px
+                left: 0
+                height: 0
+                overflow: hidden
+                // z-index: 1
+                // height: 60vh
+                width: 100%
+                transition: 0.3s
+                // position: absolute
+                // top: -100vh
+                // left: 0
+                &.underHeader
+                    background-color: #119265
+
+                &-active
+                    height: 500px
+                ul
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center
+                    height: 100%
+                    li 
+                        padding: 2em 0
+                        border-bottom: 1px solid black
+                        width: 100%
+                        text-align: center
+
+    .works 
+        .flex-list 
+            .list-item
+                font-size: 0.8em
+                width: 50%
+    .counter 
+        .counter-slider
+            .slider-item
+                margin-bottom: 6em
+                width: 50%
+    .discuss 
+        .flex-container 
+            flex-direction: column
+            .konts
+                text-align: center
+                width: 100%
+                max-width: unset
+                margin-bottom: 1em
+                .inf 
+                    width: 100%
+            .form
+                width: unset
+                form
+                    text-align: center
+                    .name
+                        width: calc(96.2% + 9px)
+                    .email
+                        margin-top: 1.609em
+                        margin-left: 0
+                        width: calc(96.2% + 9px)
+                    .sumbit
+                        justify-content: center
+            .soc
+                ul
+                    flex-direction: row
+                    justify-content: space-evenly
+    .footer
+        text-align: center
+        .container
+            flex-wrap: nowrap
+            padding: 0
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            &>div 
+                padding: 0
+        .about
+            width: 100%
+        .subscribe
+            width: 100%
+        .explore
+            width: 100%
+            .flex
+                justify-content: center
+                div:now(:first-child)
+                    margin-left: 10px
+        .author 
+            text-align: center
+            width: 100%
+@media screen and (max-width: 400px)
+    .works 
+        .container
+            padding: 0
+        .flex-list 
+            .list-item
+                font-size: 0.6em
+                .mask 
+                    img
+                        width: 20px
+                        height: 12px
+                        margin-bottom: 0.5em
+    .counter 
+        .counter-slider
+            .slider-item
+                width: 100%
