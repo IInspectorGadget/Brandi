@@ -987,6 +987,14 @@ h1, h2, h3, h4, h5, p {
 }
 
 @media screen and (max-width: 660px) {
+  @keyframes bacground-change {
+    0% {
+      background-image: url(../img/counter-bg1-mobile.jpg);
+    }
+    100% {
+      background-image: url(../img/counter-bg2-mobile.jpg);
+    }
+  }
   .mobile-menu__btn {
     z-index: 999;
     display: block;
