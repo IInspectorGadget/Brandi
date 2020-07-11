@@ -87,8 +87,6 @@ wow.init();
 $('.features .slick-list').addClass('wow animate__animated animate__bounceInUp');
 $('.slick-dots').addClass('wow animate__animated animate__bounceIn')
 
-
-
 const filterBox = document.querySelectorAll('.box');
 const filter_list = document.querySelectorAll('.filter li');
 
@@ -133,9 +131,39 @@ mobile_btn.onclick = ()=>{
 const counts = document.querySelectorAll('.counter-slider .count');
 const counter = $('.counter');
 var showCounter = true
+
+
+
+
+$("nav").on("click","a", function (event) {
+  // исключаем стандартную реакцию браузера
+  event.preventDefault();
+
+  // получем идентификатор блока из атрибута href
+  var id  = $(this).attr('href');
+  // находим высоту, на которой расположен блок
+  var top = $(id).offset().top;
+  // анимируем переход к блоку, время: 800 мс
+  $('body,html').animate({scrollTop: top}, 800);
+});
+
 $(window).scroll(function(){
 
-  if($(this).scrollTop() > $('header').height()){
+  var $sections = $('.section');
+	$sections.each(function(i,el){
+        var top  = $(el).offset().top - 60;
+        var bottom = top +$(el).height();
+        var scroll = $(window).scrollTop();
+        var id = $(el).attr('id');
+    	if( scroll > top && scroll < bottom){
+          $('a.active').removeClass('active');
+			    $('a[href="#'+id+'"]').addClass('active');
+        }
+  })
+
+
+  // Появление шапки
+  if($(this).scrollTop() > $('header').height()-100){
     $('nav').addClass('underHeader')
     $('.right-side').addClass('underHeader')
 
@@ -144,7 +172,7 @@ $(window).scroll(function(){
     $('.right-side').removeClass('underHeader')
   }
 
-
+  // Счётчик
   if(!showCounter) return false
   if ($(this).scrollTop() > counter.offset().top - 650) {
     $('.counter-slider .count').each(function () {

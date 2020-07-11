@@ -143,11 +143,26 @@ h1, h2, h3, h4, h5, p {
 }
 
 .header nav .left-side .introduce {
+  padding-top: 0.2em;
+  margin-left: 1em;
   color: #4a5455;
 }
 
 .header nav ul {
   display: flex;
+}
+
+.header nav ul li a {
+  transition: 0.2s;
+  color: #e0dcdc;
+}
+
+.header nav ul li a.active {
+  color: #fff;
+}
+
+.header nav ul li a:hover {
+  color: #fff;
 }
 
 .header nav ul li:not(:first-child) {
@@ -978,6 +993,9 @@ h1, h2, h3, h4, h5, p {
   }
   .mobile-menu__btn .mobile-menu__icon {
     display: block;
+  }
+  .header nav {
+    position: relative;
   }
   .header nav .right-side {
     z-index: 99;

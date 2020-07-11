@@ -117,12 +117,21 @@ h1, h2, h3, h4, h5, p
                 color: #0b2429
                 
             .introduce
+                padding-top: 0.2em
+                margin-left: 1em
                 color: #4a5455
 
         ul
-            
             display: flex
             li
+                
+                a
+                    transition: 0.2s
+                    color: #e0dcdc
+                    &.active 
+                        color:#fff
+                    &:hover 
+                        color: #fff
                 &:not(:first-child)
                     padding-left: 1em
     .greeting
@@ -764,6 +773,7 @@ h1, h2, h3, h4, h5, p
             display: block
     .header 
         nav 
+            position: relative
             .flex-container
             .right-side
                 z-index: 99
