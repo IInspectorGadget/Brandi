@@ -71,7 +71,7 @@ $('.team .flex-list').slick({
     // instead of a settings object
   ]
 });
-
+let lazy = lazyload();
 
 wow = new WOW(
   {
