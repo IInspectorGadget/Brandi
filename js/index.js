@@ -71,7 +71,6 @@ $('.team .flex-list').slick({
     // instead of a settings object
   ]
 });
-let lazy = lazyload();
 
 wow = new WOW(
   {
@@ -85,7 +84,7 @@ wow = new WOW(
 wow.init();
 
 $('.features .slick-list').addClass('wow animate__animated animate__bounceInUp');
-$('.slick-dots').addClass('wow animate__animated animate__bounceIn')
+$('.slick-dots').addClass('wow animate__animated animate__bounceIn');
 
 const filterBox = document.querySelectorAll('.box');
 const filter_list = document.querySelectorAll('.filter li');
